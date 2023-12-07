@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Medicamentos</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <style>
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Registro de Medicamentos</h1>
+    </header>
+    <main>
+        <form id="medicamentoForm">
+            <label for="nomeMedicamento">Nome do Medicamento:</label>
+            <input type="text" id="nomeMedicamento" required/>
+
+            <label for="dosagem">Dosagem:</label>
+            <input type="text" id="dosagem" required/>
+
+            <label for="frequencia">Frequência:</label>
+            <input type="text" id="frequencia" required/>
+
+            <label for="dataInicio">Data de Início:</label>
+            <input type="date" id="dataInicio" required/>
+
+            <label for="dataTermino">Data de Término:</label>
+            <input type="date" id="dataTermino" required/>
+
+            <label for="instrucoes">Instruções:</label>
+            <input type="text" id="instrucoes" required/>
+
+            <div id="legendaInserir" class="legenda">Pressione primeiro "Inserir" e depois "Salvar"</div>
+            <div id="legendaSalvar" class="legenda">Agora pressione "Salvar"</div>
+            <button type="button" onclick="inserir()">Inserir</button>
+            <button type="button" onclick="Salvar()" class="salvar-button">Salvar</button>
+            <button type="button" onclick="limparMedicamentos()">Limpar Medicamentos</button>
+        </form>
+
+        <table border="1" width="100%" id="tabela">
+            <thead>
+                <tr>
+                    <th>Nome do Medicamento</th>
+                    <th>Dosagem</th>
+                    <th>Frequência</th>
+                    <th>Data de Início</th>
+                    <th>Data de Término</th>
+                    <th>Instruções</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody id="tabelaCorpo">
+            </tbody>
+        </table>
+    </main>
+</body>
+</html>
